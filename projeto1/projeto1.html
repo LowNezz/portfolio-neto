@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz</title>
+
+    <link rel="stylesheet" href="projeto1.css">
+</head>
+
+<body>
+
+    <main class="quiz-container">
+
+        <div id="startScreen" class="screen">   
+     <a href="../index.html" class="back-home">
+        ← Voltar ao Portifólio
+    </a>
+
+    <p class="logo">NETO</p>
+
+    <h1>Quiz</h1>
+
+    <p class="description">
+        Teste seus conhecimentos, ganhe XP e suba de nível.
+    </p>
+
+    <div class="profile-card">
+
+        <div class="profile-top">
+
+            <div class="profile-user">
+                <div class="profile-avatar">N</div>
+
+                <div>
+                    <span class="profile-label">JOGADOR</span>
+                    <strong id="playerName">Neto</strong>
+                </div>
+            </div>
+
+            <div class="level-badge">
+                Nível <span id="playerLevel">1</span>
+            </div>
+
+        </div>
+
+        <div class="xp-info">
+            <span>XP</span>
+            <span id="xpText">0 / 500</span>
+        </div>
+
+        <div class="xp-bar">
+            <div id="xpBar"></div>
+        </div>
+
+    </div>
+
+    <button id="startButton">
+        Começar Quiz
+    </button>
+
+    <div class="start-actions">
+
+        <button id="rankingButton" class="secondary-button" type="button">
+            🏆
+            <span>
+                <strong>Ranking</strong>
+                <small>Melhores pontuações</small>
+            </span>
+        </button>
+
+        <button id="statsButton" class="secondary-button" type="button">
+            📊
+            <span>
+                <strong>Estatísticas</strong>
+                <small>Seu desempenho</small>
+            </span>
+        </button>
+
+    </div>
+
+    <div class="quiz-summary">
+        <span>90 perguntas</span>
+        <i></i>
+        <span>2 categorias</span>
+        <i></i>
+        <span>3 dificuldades</span>
+    </div>
+
+    <div id="startPanel" class="start-panel hidden">
+
+        <div class="panel-header">
+            <h3 id="panelTitle"></h3>
+
+            <button id="closePanel" type="button">
+                ✕
+            </button>
+        </div>
+
+        <div id="panelContent"></div>
+
+    </div>
+
+</div>
+
+
+        <div id="categoryScreen" class="screen hidden">
+
+            <p class="logo">QUIZ</p>
+
+            <h2>Escolha uma categoria</h2>
+
+            <p class="description">
+                Sobre o que você entende mais?
+            </p>
+
+            <div class="selection-buttons">
+
+                <button class="category-button" data-category="minecraft">
+                    <span class="selection-icon">⛏️</span>
+                    <span>Minecraft</span>
+                </button>
+
+                <button class="category-button" data-category="anime">
+                    <span class="selection-icon">🍥</span>
+                    <span>Anime</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div id="difficultyScreen" class="screen hidden">
+
+            <p class="logo">QUIZ</p>
+
+            <button id="backButton">
+                ← Voltar
+            </button>
+
+            <h2 id="categoryTitle">
+                Minecraft
+            </h2>
+
+            <p class="description">
+                Escolha a dificuldade.
+            </p>
+
+            <div class="difficulty-buttons">
+
+                <button class="difficulty-button" data-difficulty="facil">
+                    <span>Fácil</span>
+                    <small>Para começar</small>
+                </button>
+
+                <button class="difficulty-button" data-difficulty="medio">
+                    <span>Médio</span>
+                    <small>Já conhece bastante</small>
+                </button>
+
+                <button class="difficulty-button" data-difficulty="dificil">
+                    <span>Difícil</span>
+                    <small>Para quem manja</small>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div id="quizScreen" class="screen hidden">
+
+            <div class="quiz-top">
+
+                <span id="quizInfo">
+                    Minecraft • Fácil
+                </span>
+
+                <span id="score">
+                    Pontos: 0
+                </span>
+
+            </div>
+
+            <div class="question-info">
+
+                <span id="questionNumber">
+                    Pergunta 1 de 10
+                </span>
+
+            </div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+            <h2 id="question"></h2>
+
+            <div id="answers">
+
+                <button class="answer"></button>
+                <button class="answer"></button>
+                <button class="answer"></button>
+                <button class="answer"></button>
+
+            </div>
+
+            <button id="nextButton" class="hidden">
+                Próxima pergunta →
+            </button>
+
+        </div>
+
+
+        <div id="resultScreen" class="screen hidden">
+
+            <p class="logo">NETO</p>
+
+            <p class="result-small">
+                QUIZ FINALIZADO
+            </p>
+
+            <h2>Seu resultado</h2>
+
+            <p id="resultCategory"></p>
+
+            <div id="finalScore">
+                0/10
+            </div>
+
+            <p id="resultMessage"></p>
+
+            <p class="record">
+             Recorde:
+             <span id="highScore">0</span>
+             </p>
+            <div class="result-buttons">
+
+                <button id="restartButton">
+                    Jogar novamente
+                </button>
+
+                <button id="menuButton">
+                    Escolher outro quiz
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="projeto1.js"></script>
+</body>
+</html>
